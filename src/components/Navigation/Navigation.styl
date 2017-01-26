@@ -1,0 +1,51 @@
+$padding = 8px
+$blue = #0bffff
+$red = #ff0b0b
+
+.nav
+  height 100%
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  ul,li
+    min-width 75%
+    padding 0
+    max-width 700px
+    margin 0
+  li
+    list-style-type none
+    width 100%
+    background #000
+    //border solid #fff 4px
+    text-align center
+    padding 4px
+    transition linear .3s all
+    transform-origin center
+    animation slide-in .6s forwards
+    &:nth-of-type(2n)
+      animation slide-in-left .5s forwards
+  li:hover
+    background $blue
+  a
+    text-decoration none
+    text-transform uppercase
+    text-shadow 0 0 4px #000
+    color #fff
+    h1
+      font-size 8px * 3
+
+ 
+    
+    
+@keyframes slide-in
+  from
+    transform translate(-100%) rotate(2deg)
+  to 
+    transform translate(2%) rotate(1deg)
+
+@keyframes slide-in-left
+  from
+    transform translate(100%) rotate(-2deg)
+  to 
+    transform translate(-2%) rotate(-1deg)
